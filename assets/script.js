@@ -1,5 +1,5 @@
 //named function with two parameters
-function add(a, b) {
+function add (a, b) {
   return a + b;
 }
 
@@ -28,7 +28,7 @@ function isPositive(number) {
 let isPositive2 = (number) => number >= 0;
 //to go further since only one parameter can remove the parens too!
 //so number is the argument and we are returning if its greater than zero.
-let isPositive3 = (number) => number >= 0;
+let isPositive3 = number => number >= 0;
 
 
 
@@ -38,9 +38,8 @@ let isPositive3 = (number) => number >= 0;
 
 
 //named function with no parameters
-function randomNumber() {
-  return Math.random;
-}
+let randomNumber = () =>  Math.random;
+
 
 //cleaner and on one line
 let randomNumber2 = () => Math.random;
@@ -53,9 +52,7 @@ let randomNumber2 = () => Math.random;
 
 
 //anonymous function
-document.addEventListener("click", function () {
-  console.log("Click");
-});
+document.addEventListener("click", () =>  console.log("Click"));
 
 document.addEventListener("click", () => console.log("Click"));
 
@@ -67,21 +64,22 @@ document.addEventListener("click", () => console.log("Click"));
 
 
 /// practice
-function multiply(a, b){
-return a * b;
-}
+let multiply = (a, b) => a * b;
 
-function isNegative(number){
-return number < 0;
-}
 
-function randomNum(){
-    return  Math.random;
-}
 
-document.addEventListener("click", function () {
-    console.log("Click");
-  });
+
+
+let isNegative = number => number < 0;
+
+
+
+
+let randomNum = () => Math.random;
+
+
+
+document.addEventListener("click", () => console.log("Click"));
 
 
 

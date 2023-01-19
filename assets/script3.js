@@ -5,21 +5,22 @@
 //FUNCTION scoped variable is alowed anywhere inside the function it is declared in.
 //BLOCK scoped variable is allowed ONLY WITHIN BLOCK such as IF statement or LOOP.
 //not outside the if or loop for example
+//2 different BLOCKS defined below (2 if statments)
+//VAR is function scoped so if no function in side of its globally scoped
 
 //let, const, var
-
+let varVariable = "";
 if (true) {
-  var varVariable = "This is true";
+  varVariable = "This is true";
 }
-
 
 console.log(varVariable);
 
-if (true) {
-  let letVariable = "This is true too";
-  //   console.log(letVariable);
-}
-console.log(letVariable);
+// if (true) {
+//   let letVariable = "This is true too";
+//   console.log(letVariable);
+// }
+// console.log(letVariable);
 
 //varVariable is logging true because it is FUNCTION scoped
 //if there is no function it is inside of it is GLOBAL scoped
@@ -32,13 +33,11 @@ console.log(letVariable);
 
 //same with const... it is BLOCK scoped
 
-//   if (true) {
-//     const constVariable = "This is true again";
-//     //   console.log(constVariable);
-//   }
-//   console.log(constVariable);
-
-
+if (true) {
+  const constVariable = "This is true again";
+  console.log(constVariable);
+}
+// console.log(constVariable);
 
 //Now redefine var variable by redeclaring it outside function
 //*DEMO*  var varVariable = 'This is false!' on line 15
@@ -52,3 +51,15 @@ console.log(letVariable);
 // console.log(letVariable);
 
 //`const` is a signal that the identifier won't be reassigned. `let` is a signal that the variable may be reassigned, such as a counter in a loop, or a value swap in an algorithm
+
+// const constVar = 1;
+const constVar = { name: "vian" };
+// let letVar = 1
+
+// letVar = 2
+// constVar = 2;
+constVar.name = "someone else";
+// console.log(letVar);
+console.log(constVar);
+
+// you cannot change (constVar) the value of a variable with const. This is what const prevents us from doing. It is same as let otherwise.
